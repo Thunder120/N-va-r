@@ -7,6 +7,8 @@ import WhyNovair from "@/components/home/WhyNovair";
 import Testimonials from "@/components/home/Testimonials";
 import Statistics from "@/components/home/Statistics";
 import CommunitySection from "@/components/home/CommunitySection";
+import InstagramGallery from "@/components/home/InstagramGallery";
+import Newsletter from "@/components/home/Newsletter";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Gem, Sparkles } from "lucide-react";
@@ -45,6 +47,8 @@ export default function Home() {
         <Testimonials />
         <Statistics />
         <CommunitySection />
+        <InstagramGallery />
+        <Newsletter />
       </main>
       <Footer />
       <MobileNav />
