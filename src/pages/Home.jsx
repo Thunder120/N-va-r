@@ -1,6 +1,8 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MobileNav from "@/components/layout/MobileNav";
+import FeaturedCollection from "@/components/home/FeaturedCollection";
+import StockPreviews from "@/components/home/StockPreviews";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Gem, Sparkles } from "lucide-react";
@@ -33,6 +35,8 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
+        <FeaturedCollection />
+        <StockPreviews />
       </main>
       <Footer />
       <MobileNav />
