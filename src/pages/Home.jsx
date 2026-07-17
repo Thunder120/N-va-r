@@ -3,6 +3,10 @@ import Footer from "@/components/layout/Footer";
 import MobileNav from "@/components/layout/MobileNav";
 import FeaturedCollection from "@/components/home/FeaturedCollection";
 import StockPreviews from "@/components/home/StockPreviews";
+import WhyNovair from "@/components/home/WhyNovair";
+import Testimonials from "@/components/home/Testimonials";
+import Statistics from "@/components/home/Statistics";
+import CommunitySection from "@/components/home/CommunitySection";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Gem, Sparkles } from "lucide-react";
@@ -37,6 +41,10 @@ export default function Home() {
         </section>
         <FeaturedCollection />
         <StockPreviews />
+        <WhyNovair />
+        <Testimonials />
+        <Statistics />
+        <CommunitySection />
       </main>
       <Footer />
       <MobileNav />
