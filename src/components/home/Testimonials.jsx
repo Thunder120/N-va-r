@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const testimonials = [
-  { text: "NOVAIR changed how I discover fragrance. The separation between rare and iconic makes exploring feel intentional. I found my signature scent through the community.", author: "Adrien M.", role: "Fragrance Enthusiast" },
-  { text: "Not a store — a gallery. The way each bottle is presented, with full note pyramids and that cinematic photography, made me appreciate perfumery as art.", author: "Sofia R.", role: "Collector" },
-  { text: "The WhatsApp community is unlike anything else. Direct support, restock alerts, and conversations with people who truly understand scent. Worth every moment.", author: "Marcus L.", role: "Community Member" },
+  { text: "I tested hundreds of fragrances so you don't have to. My wallet still hasn't recovered, but your collection will.", author: "Ayaan Sharma", role: "Novair Founder" },
+  { text: "My job was supposed to be helping run the business. Somehow it turned into smelling perfumes all day. No complaints.", author: "Ansh Bhardwaj", role: "Co-Founder" },
+  { text: "Wasn't expecting much at first, but the fragrance was exactly as described. Smells amazing, lasts for hours, and the whole experience felt premium. Will definitely order again.", author: "Yug", role: "Customer" },
 ];
 
 export default function Testimonials() {
