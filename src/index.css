@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 230 12% 96%;
+    --card: 230 10% 10%;
+    --card-foreground: 230 12% 96%;
+    --popover: 230 10% 8%;
+    --popover-foreground: 230 12% 96%;
+    --primary: 230 12% 96%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 230 8% 14%;
+    --secondary-foreground: 230 12% 96%;
+    --muted: 230 8% 14%;
+    --muted-foreground: 230 8% 64%;
+    --accent: 40 30% 40%;
+    --accent-foreground: 230 12% 96%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 230 12% 96%;
+    --border: 230 10% 18%;
+    --input: 230 10% 18%;
+    --ring: 230 12% 80%;
+    --radius: 0.25rem;
+    --font-heading: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --novair-glass-highlight: linear-gradient(135deg, rgba(255,255,255,0.25), transparent);
+    --novair-volumetric-fog: rgba(200, 200, 220, 0.03);
+    --novair-bloom-glow: #C8CCD4;
+    --novair-obsidian: #070708;
+    --novair-vapor: #16161A;
+    --novair-crystalline: #F4F4F9;
+    --novair-amber: #1A1612;
+  }
+
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "ss01", "ss02";
+    background-color: var(--novair-obsidian);
+    overflow-x: hidden;
+  }
+  ::selection { background: rgba(244, 244, 249, 0.15); color: var(--novair-crystalline); }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--novair-obsidian); }
+  ::-webkit-scrollbar-thumb { background: rgba(200, 204, 212, 0.2); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(200, 204, 212, 0.4); }
+}
+
+@layer components {
+  .novair-glass {
+    background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .novair-glass-strong {
+    background: linear-gradient(135deg, rgba(22,22,26,0.8), rgba(7,7,8,0.9));
+    backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .novair-text-glow { text-shadow: 0 0 40px rgba(200, 204, 212, 0.3); }
+  .novair-grain { position: relative; }
+  .novair-grain::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .novair-vapor-bg {
+    background: radial-gradient(ellipse at top, rgba(200,200,220,0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom, rgba(26,22,18,0.3) 0%, transparent 50%);
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .perspective-1000 { perspective: 1000px; }
+  .preserve-3d { transform-style: preserve-3d; }
+}
